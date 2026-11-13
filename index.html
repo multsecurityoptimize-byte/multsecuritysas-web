@@ -104,6 +104,11 @@ ul.chk li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:
 footer{background:var(--deep);color:#cfcde0;font-size:14px}
 footer .w{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
 footer img{height:36px!important;width:auto}
+footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{color:#cfcde0;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.nota{font-size:13px;color:var(--mute,#4a4766);margin:10px 0 0}
+#ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:560px;margin:0 auto;background:#fff;color:#1d1a33;border:1px solid #e2e0ea;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:16px;font-size:14px;display:none}
+#ck .b{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}#ck button{flex:1;min-height:44px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer;border:1px solid #231f3f}
+#ck .si{background:#231f3f;color:#fff}#ck .no{background:#fff;color:#231f3f}
 /* Enlace discreto al inventario */
 .acc{color:#6b6787;text-decoration:none;font-size:13px}
 .acc:hover{color:var(--neon)}
@@ -247,6 +252,7 @@ footer img{height:36px!important;width:auto}
     <a href="https://www.google.com/maps/search/?api=1&query=Carrera+58+%2375-10+Bogot%C3%A1" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Dirección</small>Carrera 58 #75-10, Bogotá D.C., Colombia</span></a>
    </div>
    <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg>Escríbanos por WhatsApp</a>
+   <p class="nota">Al escribirnos, sus datos se usan solo para responderle y cotizar, según nuestra <a href="privacidad.html">política de privacidad</a>.</p>
   </div>
   <iframe class="map" title="Mapa: Carrera 58 #75-10, Bogotá" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Carrera%2058%20%2375-10%2C%20Bogot%C3%A1&z=16&output=embed"></iframe>
  </div>
@@ -256,10 +262,31 @@ footer img{height:36px!important;width:auto}
 <footer><div class="w">
  <img src="img/logo.png" alt="Mult Security" width="310" height="99" loading="lazy">
  <span>© <span id="y">2026</span> Mult Security SAS · Carrera 58 #75-10, Bogotá</span>
- <a class="acc" href="https://app.multsecuritysas.com/" rel="nofollow">Acceso</a>
+ <span class="lg"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><button type="button" id="ckb" hidden>Cookies</button><a class="acc" href="https://app.multsecuritysas.com/" rel="nofollow">Acceso</a></span>
 </div></footer>
 
 <a class="float" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
-<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+<div id="ck" role="dialog" aria-label="Aviso de cookies"><b>¿Acepta cookies de medición?</b><br>Usamos Google Analytics y el Pixel de Meta para saber cómo se usa el sitio y mejorar nuestros anuncios. Solo se activan si usted acepta. <a href="privacidad.html#cookies">Más información</a>.<div class="b"><button class="no" type="button" id="ckn">Rechazar</button><button class="si" type="button" id="cks">Aceptar</button></div></div>
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+(function(){
+ // Para activar la medición, ponga aquí los códigos. Mientras estén vacíos no aparece aviso ni se carga nada.
+ var GA_ID="", PIXEL_ID="";
+ if(!GA_ID&&!PIXEL_ID)return;
+ var ck=document.getElementById("ck"),b=document.getElementById("ckb");
+ function leer(){try{return localStorage.getItem("cookies_ok")}catch(e){return null}}
+ function guardar(v){try{localStorage.setItem("cookies_ok",v)}catch(e){}}
+ function cargar(){
+  if(GA_ID){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(s);
+   window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",GA_ID,{anonymize_ip:true});}
+  if(PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL_ID);fbq("track","PageView");}
+ }
+ b.hidden=false;
+ b.onclick=function(){ck.style.display="block"};
+ document.getElementById("cks").onclick=function(){guardar("si");ck.style.display="none";cargar()};
+ document.getElementById("ckn").onclick=function(){var antes=leer();guardar("no");ck.style.display="none";if(antes==="si")location.reload()};
+ var v=leer();if(v==="si")cargar();else if(v!=="no")ck.style.display="block";
+})();
+</script>
 </body>
 </html>
