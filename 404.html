@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada · Mult Security SAS</title>
+<meta name="description" content="La página que busca no existe. Vuelva al inicio de Mult Security SAS o escríbanos por WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="theme-color" content="#231f3f">
+<link rel="preload" href="/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Roboto;src:url(/fonts/roboto.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@view-transition{navigation:auto}
+header a img{transition:transform .26s cubic-bezier(.2,.8,.2,1)}header a:hover img{transform:translateY(-2px) scale(1.03)}
+:root{--deep:#231f3f;--neon:#6fd37f;--green:#1f7a33;--green2:#14551f;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--deep);color:#fff;font:16px/1.6 Roboto,Arial,sans-serif;display:flex;flex-direction:column}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:4px}
+header,main{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+header{min-height:72px;display:flex;align-items:center}
+header img{height:46px;width:auto}
+main{flex:1;display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:48px;align-items:center;padding-top:40px;padding-bottom:80px}
+svg{width:100%;height:auto}
+.k{color:var(--neon);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin:0 0 12px}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.05;font-weight:900;margin:0 0 16px;max-width:620px}
+p{color:#cfcde0;max-width:520px;margin:0 0 28px;font-size:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:6px;background:var(--green);color:#fff;font-weight:500;text-decoration:none;transition:color .26s var(--ease)}
+.btn:not(.ghost):hover,.btn:not(.ghost):focus-visible{color:var(--deep)}.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--neon);transform:translateX(-101%);transition:transform .26s var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn.ghost{background:transparent;border:2px solid #fff}
+.btn.ghost::before{background:#fff}
+.btn.ghost:hover,.btn.ghost:focus-visible{color:var(--deep)}
+@media (max-width:640px){main{grid-template-columns:1fr;gap:24px}main svg{max-width:150px}.btn{flex:1 1 100%;justify-content:center}}
+@media (prefers-reduced-motion:reduce){*,*::before{transition:none!important}}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:#fff;color:#231f3f;font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none}.skip:focus{top:12px}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header><a href="/"><img src="/img/logo.png" alt="Mult Security, ir al inicio" width="310" height="99"></a></header>
+<main id="contenido" tabindex="-1">
+ <svg viewBox="0 0 220 300" aria-hidden="true">
+  <rect x="10" y="10" width="200" height="290" fill="none" stroke="#9c99b8" stroke-width="8"/>
+  <rect x="16" y="16" width="188" height="284" fill="#2d2850" stroke="#6fd37f" stroke-width="2"/>
+  <rect x="170" y="150" width="16" height="36" rx="4" fill="#cfcde0"/>
+  <rect x="4" y="80" width="34" height="10" rx="3" fill="#e6e4f0"/>
+  <rect x="4" y="220" width="34" height="10" rx="3" fill="#e6e4f0"/>
+  <rect x="105" y="4" width="10" height="34" rx="3" fill="#e6e4f0"/>
+ </svg>
+ <div>
+  <p class="k">Error 404</p>
+  <h1>Esta puerta está cerrada</h1>
+  <p>La página que busca no existe o cambió de dirección. Vuelva al inicio o escríbanos y le ayudamos.</p>
+  <div class="cta">
+   <a class="btn" href="/">Volver al inicio</a>
+   <a class="btn ghost" href="https://wa.me/573107673808" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+ </div>
+</main>
+</body>
+</html>

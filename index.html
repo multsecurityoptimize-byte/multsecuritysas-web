@@ -3,17 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mult Security SAS · Puertas de seguridad, cerraduras digitales y cajas fuertes en Bogotá</title>
-<meta name="description" content="Fábrica de puertas de seguridad y cajas fuertes en Bogotá. Importamos cerraduras digitales desde China. Diseños a la medida, instalación llave en mano y garantía de 10 años. Llámenos: (601) 231 7441.">
+<title>Mult Security · Puertas de seguridad y cerraduras digitales en Bogotá</title>
+<meta name="description" content="Fábrica de puertas de seguridad y cajas fuertes en Bogotá, con cerraduras digitales importadas. A la medida, instaladas y con 10 años de garantía.">
 <link rel="canonical" href="https://multsecuritysas.com/">
 <meta property="og:title" content="Mult Security SAS · Fabricamos tranquilidad">
 <meta property="og:description" content="Puertas de seguridad a la medida, cerraduras digitales importadas y cajas fuertes en Bogotá.">
 <meta property="og:image" content="https://multsecuritysas.com/img/portada.jpg">
 <meta property="og:url" content="https://multsecuritysas.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Mult Security SAS">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="877">
+<meta property="og:image:alt" content="Puerta de seguridad en madera instalada por Mult Security">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mult Security SAS · Fabricamos tranquilidad">
+<meta name="twitter:description" content="Puertas de seguridad a la medida, cerraduras digitales importadas y cajas fuertes en Bogotá.">
+<meta name="twitter:image" content="https://multsecuritysas.com/img/portada.jpg">
 <meta name="theme-color" content="#231f3f">
-<link rel="icon" href="img/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/portada.jpg" as="image" fetchpriority="high">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Mult Security SAS","slogan":"Fabricamos tranquilidad",
 "description":"Fábrica de puertas de seguridad y cajas fuertes en Bogotá. Importadores de cerraduras digitales.","url":"https://multsecuritysas.com/","image":"https://multsecuritysas.com/img/portada.jpg",
@@ -21,35 +33,63 @@
 "sameAs":["https://multsecurity.com/"]}
 </script>
 <style>
-:root{--ink:#1d1a33;--mute:#4a4766;--line:#e2e0ea;--bg:#f3f2f7;--card:#fff;--deep:#231f3f;--deep2:#2d2850;--neon:#6fd37f;--green:#1f7a33;--green2:#14551f}
+:root{--ink:#1d1a33;--mute:#4a4766;--line:#e2e0ea;--bg:#f3f2f7;--card:#fff;--deep:#231f3f;--deep2:#2d2850;--neon:#6fd37f;--green:#1f7a33;--green2:#14551f;--ease:cubic-bezier(.2,.8,.2,1);--t:.26s}
+@font-face{font-family:Roboto;src:url(fonts/roboto.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@view-transition{navigation:auto}
+header{view-transition-name:cabecera}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Roboto,Arial,sans-serif}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .w{max-width:1200px;margin:0 auto;padding:0 20px}
-:focus-visible{outline:3px solid var(--neon);outline-offset:2px}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:4px}
+.top :focus-visible{outline-color:#fff}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:#fff;color:var(--deep);font-weight:700;padding:12px 18px;border-radius:6px;text-decoration:none;transition:top var(--t) var(--ease)}
+.skip:focus{top:12px}
 
 /* Barra superior */
 .top{background:var(--green);color:#fff;font-size:14px}
 .top .w{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
-.top a{text-decoration:none;font-weight:500}
+.top span{display:inline-block;padding:3px 0}
+.top a{display:inline-block;padding:3px 0;text-decoration:none;font-weight:500;background:linear-gradient(#fff,#fff) left bottom/0 1px no-repeat;transition:background-size var(--t) var(--ease)}
+.top a:hover{background-size:100% 1px}
 header{background:var(--deep);position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff14}
 header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
 header img{height:46px!important;width:auto}
-nav{display:flex;gap:22px;align-items:center}
-nav a{color:#fff;text-decoration:none;font-size:15px}
-nav a:hover{color:var(--neon)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;border:0;border-radius:6px;min-height:46px;padding:0 22px;font:500 16px Roboto,Arial,sans-serif;text-decoration:none;cursor:pointer}
-.btn:hover{background:var(--green2)}
+.logo{display:block;border-radius:6px}
+.logo img{transition:transform var(--t) var(--ease)}
+.logo:hover img{transform:translateY(-2px) scale(1.03)}
+nav{display:flex;gap:22px;align-items:center;margin-left:auto}
+.acts{display:flex;gap:10px;align-items:center}
+nav a:not(.btn){color:#fff;text-decoration:none;font-size:15px;position:relative;padding:6px 0}
+nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--neon);transform:scaleX(0);transform-origin:left;transition:transform var(--t) var(--ease)}
+nav a:not(.btn):hover::after,nav a[aria-current]::after{transform:scaleX(1)}
+nav a[aria-current]{color:var(--neon)}
+.menu{display:none;align-items:center;gap:8px;background:none;border:1px solid #ffffff40;color:#fff;border-radius:6px;min-height:46px;padding:0 14px;font:500 15px Roboto,Arial,sans-serif;cursor:pointer}
+.menu i{position:relative;display:block;width:18px;height:2px;background:currentColor;transition:background var(--t)}
+.menu i::before,.menu i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor;transition:transform var(--t) var(--ease)}
+.menu i::before{top:-6px}.menu i::after{top:6px}
+.menu[aria-expanded=true] i{background:transparent}
+.menu[aria-expanded=true] i::before{transform:translateY(6px) rotate(45deg)}
+.menu[aria-expanded=true] i::after{transform:translateY(-6px) rotate(-45deg)}
+/* Botones: el relleno entra de izquierda a derecha, como un pasador */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;border:0;border-radius:6px;min-height:46px;padding:0 22px;font:500 16px Roboto,Arial,sans-serif;text-decoration:none;cursor:pointer;transition:color var(--t) var(--ease),transform .12s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--neon);transform:translateX(-101%);transition:transform var(--t) var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn svg{transition:transform var(--t) var(--ease)}
+.btn:not(.ghost):hover,.btn:not(.ghost):focus-visible{color:var(--deep)}
+.btn:hover svg{transform:translateX(4px)}
+.btn:active{transform:scale(.97)}
 .btn.ghost{background:transparent;border:2px solid #fff}
-.btn.ghost:hover{background:#ffffff1a}
+.btn.ghost::before{background:#fff}
+.btn.ghost:hover,.btn.ghost:focus-visible{color:var(--deep)}
 .wa{width:20px;height:20px;fill:currentColor}
 
 /* Portada */
-.hero{position:relative;background:var(--deep) url(img/portada.jpg) center/cover;color:#fff}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#231f3ff2 0%,#231f3fcc 45%,#231f3f55 100%)}
-.hero .w{position:relative;padding-top:110px;padding-bottom:110px}
+.hero{position:relative;background:var(--deep) url(img/portada.jpg) right 30% center/cover;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#231f3ff2 0%,#231f3fcc 32%,#231f3f33 56%,#231f3f00 74%)}
+.hero .w{position:relative;padding-top:120px;padding-bottom:120px}
 .kick{color:var(--neon);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin:0 0 12px}
 .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0 0 18px;font-weight:900;max-width:640px}
 .hero h1 span{color:var(--neon)}
@@ -67,45 +107,75 @@ ul.chk li{padding-left:30px;position:relative;margin:10px 0}
 ul.chk li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--green);box-shadow:inset 0 0 0 4px #e3f4e6}
 
 .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:40px}
-.gal img{border-radius:6px;aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .25s}
-.gal img:hover{transform:scale(1.03)}
+.gal figure,.cajas figure,.split>.ph{margin:0;border-radius:8px;overflow:hidden}
+.gal img,.cajas img{border-radius:0;aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .5s var(--ease)}
+.gal figure:hover img,.cajas figure:hover img{transform:scale(1.04)}
+
+/* Dibujo del multibloqueo */
+.lock{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:40px;align-items:center;margin-top:56px;padding:36px;background:var(--deep);color:#fff;border-radius:8px}
+.lock svg{width:100%;height:auto;display:block}
+.lock h3{font-size:clamp(22px,2.6vw,28px);line-height:1.2;margin:0 0 10px;font-weight:900}
+.lock p{color:#cfcde0;margin:0 0 18px;max-width:520px}
+.lock ol{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:p}
+.lock li{display:flex;gap:12px;align-items:baseline;color:#e6e4f0}
+.lock li::before{counter-increment:p;content:counter(p);flex:0 0 26px;height:26px;border-radius:50%;background:var(--neon);color:var(--deep);font-weight:900;font-size:14px;display:grid;place-items:center;transform:translateY(5px)}
+.bolt{transition:transform .7s var(--ease)}
+.lock.armed:not(.on) .bL{transform:translateX(26px)}
+.lock.armed:not(.on) .bR{transform:translateX(-26px)}
+.lock.armed:not(.on) .bT{transform:translateY(26px)}
+.lock .d2{transition-delay:.08s}
+.lock .d3{transition-delay:.16s}
+.lock .bT{transition-delay:.24s}
+.replay{margin-top:22px;min-height:44px;font-size:15px}
 
 /* Cerraduras */
 .cerr{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .import{display:inline-block;background:#e3f4e6;color:var(--green2);font-weight:700;border-radius:999px;padding:8px 16px;margin:0 0 16px;font-size:15px}
 .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-.prod{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
-.prod img{width:100%;height:280px;object-fit:contain;background:#fff;padding:12px}
-.prod figcaption{padding:14px 16px;font-size:15px;color:var(--mute)}
+.prod{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease)}
+.prod:hover{transform:translateY(-4px);box-shadow:0 14px 30px #231f3f1f}
+.prod .im{height:280px;background:#ebeaf1;display:grid;place-items:center;padding:20px}
+.prod img{max-height:240px;max-width:100%;width:auto;object-fit:contain;mix-blend-mode:multiply;transition:transform .5s var(--ease)}
+.prod:hover img{transform:scale(1.05)}
+.prod img.ph{width:100%;height:240px;max-height:none;object-fit:cover;border-radius:6px;mix-blend-mode:normal}
+.prod figcaption{padding:14px 16px;font-size:15px;color:var(--mute);background:var(--card);flex:1}
 .prod figcaption b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
 
 /* Diferencias */
 .dif{background:var(--deep);color:#fff}
 .dif .lead{color:#cfcde0}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.c{background:var(--deep2);border:1px solid #ffffff14;border-radius:8px;padding:26px}
-.c b{display:block;color:var(--neon);font-size:34px;font-weight:900;line-height:1;margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.c{background:var(--deep2);border:1px solid #ffffff14;border-radius:8px;padding:26px;transition:transform var(--t) var(--ease),border-color var(--t)}
+.c:hover{transform:translateY(-4px);border-color:#6fd37f66}
+.c::before{content:"";display:block;width:36px;height:6px;border-radius:3px;background:var(--neon);margin-bottom:18px;transition:width var(--t) var(--ease)}
+.c:hover::before{width:56px}
 .c h3{margin:0 0 8px;font-size:18px}
 .c p{margin:0;color:#cfcde0;font-size:15px}
+.gar{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:16px;padding:28px 32px;border-radius:8px;background:linear-gradient(90deg,#1f7a33,#14551f);}
+.gar .n{font-size:clamp(64px,9vw,104px);font-weight:900;line-height:.85;letter-spacing:-.04em;color:#fff}
+.gar h3{margin:0 0 6px;font-size:clamp(22px,2.6vw,28px);font-weight:900}
+.gar p{margin:0;color:#e3f4e6}
 
 /* Cajas */
 .cajas{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.cajas img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.cajas img{aspect-ratio:16/9}
 
 /* Contacto */
 .contact{background:var(--card);border-top:1px solid var(--line)}
 .info{display:grid;gap:14px;margin:24px 0 28px}
 .info a,.info div{display:flex;gap:14px;align-items:flex-start;text-decoration:none;font-size:17px}
+.info a .ic{transition:transform var(--t) var(--ease),background var(--t),color var(--t)}
+.info a:hover .ic{transform:translateX(4px);background:var(--green);color:#fff}
 .info small{display:block;color:var(--mute);font-size:13px}
 .ic{flex:0 0 44px;height:44px;border-radius:50%;background:#e3f4e6;color:var(--green);display:grid;place-items:center}
 .ic svg{width:20px;height:20px;fill:currentColor}
 .map{border:0;width:100%;height:100%;min-height:360px;border-radius:8px}
 
 footer{background:var(--deep);color:#cfcde0;font-size:14px}
-footer .w{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
+footer .w{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px;padding-right:96px}
 footer img{height:36px!important;width:auto}
-footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{color:#cfcde0;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
-.nota{font-size:13px;color:var(--mute,#4a4766);margin:10px 0 0}
+footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{display:inline-block;color:#cfcde0;font:inherit;background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;transition:text-underline-offset var(--t) var(--ease),color var(--t)}footer .lg [hidden]{display:none}footer .lg a:hover,footer .lg button:hover{color:#fff;text-underline-offset:6px}
+.nota{font-size:14px;line-height:1.9;color:var(--mute,#4a4766);margin:10px 0 0}.nota a{padding:5px 0;text-underline-offset:3px;transition:text-underline-offset var(--t) var(--ease)}.nota a:hover{text-underline-offset:6px}
 #ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:560px;margin:0 auto;background:#fff;color:#1d1a33;border:1px solid #e2e0ea;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:16px;font-size:14px;display:none}
 #ck .b{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}#ck button{flex:1;min-height:44px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer;border:1px solid #231f3f}
 #ck .si{background:#231f3f;color:#fff}#ck .no{background:#fff;color:#231f3f}
@@ -113,26 +183,54 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
 .acc{color:#6b6787;text-decoration:none;font-size:13px}
 .acc:hover{color:var(--neon)}
 
-.float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px #0004;transition:transform var(--t) var(--ease),box-shadow var(--t),opacity var(--t)}
+.float.off{opacity:0;transform:translateY(16px) scale(.8);pointer-events:none;visibility:hidden;transition:transform var(--t) var(--ease),opacity var(--t),visibility 0s var(--t)}
+.float:hover{transform:translateY(-3px) scale(1.06);box-shadow:0 12px 28px #0005}
 .float svg{width:30px;height:30px;fill:#fff}
 
 @media (max-width:900px){
- nav a:not(.btn){display:none}
+ .menu{display:inline-flex}
+ header .w{flex-wrap:wrap}
+ nav{gap:10px}
+ .navl{display:none;order:3;flex:1 1 100%;flex-direction:column;align-items:stretch;margin-left:0;gap:0;padding:4px 0 14px;border-top:1px solid #ffffff1a}
+ .navl.open{display:flex}
+ .navl a{padding:14px 2px!important;font-size:17px!important;border-bottom:1px solid #ffffff12}
+ .navl a::after{display:none}
  .split{grid-template-columns:1fr;gap:28px}
- .cards,.prods{grid-template-columns:repeat(2,1fr)}
+ .prods{grid-template-columns:repeat(2,1fr)}
  .gal{grid-template-columns:repeat(2,1fr)}
+ .lock{grid-template-columns:1fr;gap:24px;padding:26px}
+ .lock svg{max-width:300px;margin:0 auto}
  section{padding:56px 0}
+ .hero{background-position:62% center}
+ .hero::before{background:linear-gradient(180deg,#231f3fd9 0%,#231f3fb3 55%,#231f3f4d 100%)}
+ .hero .w{padding-bottom:150px!important}
  .hero .w{padding-top:70px;padding-bottom:70px}
+}
+@media (max-width:640px){
+ .cards{grid-template-columns:1fr}
+ .gar{grid-template-columns:1fr;gap:10px;padding:24px}
 }
 @media (max-width:520px){
  .w{padding:0 16px}
- .cards{grid-template-columns:1fr}
+ .top .w{gap:14px;font-size:13px}
+ .top span{display:none}
  .prods{grid-template-columns:1fr}
- .prod img{height:220px}
+ .prod .im{height:240px}
+ .prod img{max-height:200px}
+ .prod img.ph{height:200px}
  header img{height:38px!important}
- nav .btn{padding:0 14px}
- nav .btn span{display:none}
+ .acts .btn{padding:0 14px}
+ .acts .btn span{display:none}
+ .menu span{display:none}
  .cta .btn{flex:1 1 100%}
+ footer .w{padding-right:16px;padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{transition:none!important;animation:none!important}
+ html{scroll-behavior:auto}
+ .lock .bolt{transform:none!important}
+ .replay{display:none}
 }
 </style>
 </head>
@@ -143,6 +241,7 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
 </svg>
 
+<a class="skip" href="#contenido">Saltar al contenido</a>
 <div class="top"><div class="w">
  <a href="tel:+576012317441">PBX (601) 231 7441</a>
  <a href="https://wa.me/573107673808" target="_blank" rel="noopener">WhatsApp 310 767 3808</a>
@@ -150,18 +249,21 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
 </div></div>
 
 <header><div class="w">
- <a href="#" aria-label="Mult Security, inicio"><img src="img/logo.png" alt="Mult Security" width="310" height="99"></a>
- <nav>
+ <a class="logo" href="#inicio" aria-label="Mult Security, inicio"><img src="img/logo.png" alt="Mult Security" width="310" height="99"></a>
+ <nav class="navl" id="menu" aria-label="Principal">
   <a href="#puertas">Puertas de seguridad</a>
   <a href="#cerraduras">Cerraduras digitales</a>
   <a href="#cajas">Cajas fuertes</a>
   <a href="#contacto">Contacto</a>
-  <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg><span>Cotizar</span></a>
  </nav>
+ <div class="acts">
+  <button class="menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><span>Menú</span></button>
+  <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp"><svg class="wa" aria-hidden="true"><use href="#i-wa"/></svg><span>Cotizar</span></a>
+ </div>
 </div></header>
 
-<main>
-<div class="hero"><div class="w">
+<main id="contenido" tabindex="-1">
+<div class="hero" id="inicio"><div class="w">
  <p class="kick">Fábrica en Bogotá</p>
  <h1>Fabricamos <span>tranquilidad</span></h1>
  <p>Puertas de seguridad a la medida, cerraduras digitales importadas y cajas fuertes, instaladas y probadas en su hogar, oficina o negocio.</p>
@@ -188,8 +290,53 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
   <img src="img/puerta-madera.jpg" alt="Puerta de seguridad en madera con manija vertical, instalada por Mult Security" loading="lazy" width="1080" height="1101">
  </div>
  <div class="gal">
-  <img src="img/puerta-rustica.jpg" alt="Puerta de seguridad con acabado rústico en madera y vidrio" loading="lazy" width="1080" height="1101">
-  <img src="img/puerta-blanca.jpg" alt="Puerta de seguridad blanca con cerradura digital" loading="lazy" width="1080" height="1101">
+  <figure><img src="img/puerta-rustica.jpg" alt="Puerta de seguridad con acabado rústico en madera y vidrio" loading="lazy" width="1080" height="1101"></figure>
+  <figure><img src="img/puerta-blanca.jpg" alt="Puerta de seguridad blanca con cerradura digital" loading="lazy" width="1080" height="1101"></figure>
+ </div>
+
+ <div class="lock" id="cierre">
+  <svg viewBox="0 0 300 380" role="img" aria-labelledby="cierre-t">
+   <title id="cierre-t">Dibujo de una puerta Mult Security por dentro: pasadores de acero entran al marco por los dos costados y por arriba</title>
+   <defs>
+    <pattern id="hex" width="18" height="31.2" patternUnits="userSpaceOnUse" patternTransform="scale(.9)">
+     <path d="M9 0l9 5.2v10.4L9 20.8 0 15.6V5.2zM9 20.8v10.4M0 15.6l-9 5.2M18 15.6l9 5.2" fill="none" stroke="#6fd37f" stroke-opacity=".35" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse">
+     <circle cx="2" cy="3" r="1" fill="#ffffff" fill-opacity=".12"/><circle cx="7" cy="8" r=".8" fill="#ffffff" fill-opacity=".1"/>
+    </pattern>
+   </defs>
+   <rect width="300" height="380" rx="6" fill="#2d2850"/>
+   <rect width="300" height="380" rx="6" fill="url(#conc)"/>
+   <rect x="34" y="34" width="232" height="346" fill="none" stroke="#9c99b8" stroke-width="10"/>
+   <rect x="40" y="40" width="220" height="340" fill="#1d1a33"/>
+   <rect x="40" y="40" width="220" height="340" fill="url(#hex)"/>
+   <rect x="40" y="40" width="220" height="340" fill="none" stroke="#6fd37f" stroke-width="2"/>
+   <rect x="226" y="196" width="20" height="44" rx="4" fill="#cfcde0"/>
+   <rect class="bolt bL" x="16" y="96" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bL d2" x="16" y="206" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bL d3" x="16" y="316" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bR" x="240" y="96" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bR d2" x="240" y="270" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bR d3" x="240" y="316" width="44" height="12" rx="3" fill="#e6e4f0"/>
+   <rect class="bolt bT" x="144" y="16" width="12" height="44" rx="3" fill="#e6e4f0"/>
+   <g font-family="Roboto,Arial,sans-serif" font-weight="900" font-size="13" text-anchor="middle">
+    <circle cx="80" cy="160" r="12" fill="#6fd37f"/><text x="80" y="165" fill="#231f3f">1</text>
+    <circle cx="180" cy="78" r="12" fill="#6fd37f"/><text x="180" y="83" fill="#231f3f">2</text>
+    <circle cx="150" cy="250" r="12" fill="#6fd37f"/><text x="150" y="255" fill="#231f3f">3</text>
+    <circle cx="16" cy="40" r="12" fill="#6fd37f"/><text x="16" y="45" fill="#231f3f">4</text>
+   </g>
+  </svg>
+  <div>
+   <h3>Así cierra una puerta Mult Security</h3>
+   <p>Al cerrar, los pasadores de acero salen de la puerta y entran al marco por los costados y por arriba.</p>
+   <ol>
+    <li>Pasadores laterales que entran al marco por ambos costados.</li>
+    <li>Pasador superior que entra al marco por arriba.</li>
+    <li>Núcleo tipo honeycomb en acero de alta resistencia.</li>
+    <li>Marco anclado con concreto.</li>
+   </ol>
+   <button class="btn ghost replay" type="button">Ver el cierre otra vez</button>
+  </div>
  </div>
 </div></section>
 
@@ -199,10 +346,10 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
  <p class="import">Importamos cerraduras digitales desde China</p>
  <p class="lead">Las traemos directamente e instalamos en su puerta. Entre con huella, código, tarjeta o desde el celular, según el modelo, y conserve una llave auxiliar para cualquier eventualidad.</p>
  <div class="prods">
-  <figure class="prod"><img src="img/cerradura-doble.jpg" alt="Cerradura digital vertical en negro, vista interior y exterior" loading="lazy" width="286" height="659"><figcaption><b>Múltiples formas de ingresar</b>Huella, tarjeta de proximidad, app en el teléfono, código PIN y llave auxiliar.</figcaption></figure>
-  <figure class="prod"><img src="img/cerradura-tenon.jpg" alt="Cerradura digital Tenon con teclado táctil" loading="lazy" width="389" height="486"><figcaption><b>Teclado táctil y huella</b>Lector de huella, teclado táctil, lector de tarjeta y llave auxiliar.</figcaption></figure>
-  <figure class="prod"><img src="img/cerradura-manija.jpg" alt="Cerradura digital Tenon con manija, en negro" loading="lazy" width="496" height="1080"><figcaption><b>Con manija</b>Diseño delgado que se integra a la puerta. Pregúntenos por las opciones de ingreso.</figcaption></figure>
-  <figure class="prod"><img src="img/mirilla.jpg" alt="Mirilla digital con cámara y timbre" loading="lazy" width="371" height="346"><figcaption><b>Mirilla digital</b>Control desde la app, timbre integrado, audio bidireccional y detección de movimiento.</figcaption></figure>
+  <figure class="prod"><div class="im"><img src="img/cerradura-doble.jpg" alt="Cerradura digital vertical en negro, vista interior y exterior" loading="lazy" width="286" height="659"></div><figcaption><b>Múltiples formas de ingresar</b>Huella, tarjeta de proximidad, app en el teléfono, código PIN y llave auxiliar.</figcaption></figure>
+  <figure class="prod"><div class="im"><img src="img/cerradura-tenon-blanco.jpg" alt="Cerradura digital Tenon con teclado táctil, huella y perilla, junto a su pieza interior" loading="lazy" width="389" height="562"></div><figcaption><b>Teclado táctil y huella</b>Lector de huella, teclado táctil, lector de tarjeta y llave auxiliar.</figcaption></figure>
+  <figure class="prod"><div class="im"><img src="img/cerradura-manija.jpg" alt="Cerradura digital Tenon con manija, en negro" loading="lazy" width="496" height="1080"></div><figcaption><b>Con manija</b>Diseño delgado que se integra a la puerta. Pregúntenos por las opciones de ingreso.</figcaption></figure>
+  <figure class="prod"><div class="im"><img class="ph" src="img/mirilla.jpg" alt="Mirilla digital con cámara y timbre, instalada en una puerta" loading="lazy" width="345" height="335"></div><figcaption><b>Mirilla digital</b>Control desde la app, timbre integrado, audio bidireccional y detección de movimiento.</figcaption></figure>
  </div>
  <p style="margin:24px 0 0"><a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20cerraduras%20digitales" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg>Cotizar cerradura digital</a></p>
 </div></section>
@@ -212,20 +359,23 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
  <h2>¿Qué nos hace diferentes?</h2>
  <p class="lead">Somos fábrica: diseñamos, fabricamos e instalamos. Usted trata con nosotros de principio a fin.</p>
  <div class="cards">
-  <div class="c"><b>01</b><h3>Llave en mano</h3><p>Entregamos el producto instalado y probado.</p></div>
-  <div class="c"><b>02</b><h3>A su medida</h3><p>Medidas, acabados, colores y accesorios personalizados.</p></div>
-  <div class="c"><b>03</b><h3>Acabados de primera</h3><p>Seguridad que también se ve bien en su espacio.</p></div>
-  <div class="c"><b>10</b><h3>Años de garantía</h3><p>Calidad respaldada y cumplimiento de las normas vigentes.</p></div>
+  <div class="c"><h3>Llave en mano</h3><p>Entregamos el producto instalado y probado.</p></div>
+  <div class="c"><h3>A su medida</h3><p>Medidas, acabados, colores y accesorios personalizados.</p></div>
+  <div class="c"><h3>Acabados de primera</h3><p>Seguridad que también se ve bien en su espacio.</p></div>
+ </div>
+ <div class="gar">
+  <div class="n" aria-hidden="true">10</div>
+  <div><h3>Años de garantía</h3><p>Calidad respaldada y cumplimiento de las normas vigentes.</p></div>
  </div>
 </div></section>
 
 <section id="cajas"><div class="w">
  <div class="split">
   <div class="cajas">
-   <img src="img/caja-1.jpg" alt="Caja fuerte Mult Security" loading="lazy" width="640" height="360">
-   <img src="img/caja-3.jpg" alt="Cerradura electrónica de caja fuerte" loading="lazy" width="640" height="360">
-   <img src="img/caja-2.jpg" alt="Caja fuerte" loading="lazy" width="640" height="360">
-   <img src="img/caja-4.jpg" alt="Caja fuerte" loading="lazy" width="640" height="360">
+   <figure><img src="img/caja-1.jpg" alt="Caja fuerte verde de empotrar con buzón para depositar efectivo" loading="lazy" width="640" height="360"></figure>
+   <figure><img src="img/caja-3.jpg" alt="Cerradura electrónica con teclado y manija de tres brazos en una caja fuerte" loading="lazy" width="640" height="360"></figure>
+   <figure><img src="img/caja-2.jpg" alt="Caja fuerte color bronce con clave de disco frontal mecánica" loading="lazy" width="640" height="360"></figure>
+   <figure><img src="img/caja-4.jpg" alt="Caja fuerte blanca abierta con cerradura electrónica y documentos adentro" loading="lazy" width="640" height="360"></figure>
   </div>
   <div>
    <p class="kick" style="color:var(--green)">Cajas fuertes</p>
@@ -269,6 +419,27 @@ footer .lg{display:flex;gap:14px;flex-wrap:wrap}footer .lg a,footer .lg button{c
 <div id="ck" role="dialog" aria-label="Aviso de cookies"><b>¿Acepta cookies de medición?</b><br>Usamos Google Analytics y el Pixel de Meta para saber cómo se usa el sitio y mejorar nuestros anuncios. Solo se activan si usted acepta. <a href="privacidad.html#cookies">Más información</a>.<div class="b"><button class="no" type="button" id="ckn">Rechazar</button><button class="si" type="button" id="cks">Aceptar</button></div></div>
 <script>
 document.getElementById("y").textContent=new Date().getFullYear();
+(function(){
+ // Menú en celular
+ var b=document.querySelector(".menu"),m=document.getElementById("menu");
+ function set(o){b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú");m.classList.toggle("open",o)}
+ b.addEventListener("click",function(){set(b.getAttribute("aria-expanded")!=="true")});
+ m.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});
+ document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m.classList.contains("open")){set(false);b.focus()}});
+ if(!("IntersectionObserver" in window))return;
+ // Sección actual en el menú
+ var links={};[].forEach.call(m.querySelectorAll("a"),function(a){links[a.getAttribute("href").slice(1)]=a});
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){for(var k in links)links[k].removeAttribute("aria-current");a.setAttribute("aria-current","true")}else a.removeAttribute("aria-current")})},{rootMargin:"-45% 0px -50% 0px"});
+ Object.keys(links).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
+ // Botón flotante: se esconde cuando ya hay botones de WhatsApp en pantalla (portada y contacto)
+ var fl=document.querySelector(".float"),vis=new Set();
+ var fo=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});fl.classList.toggle("off",vis.size>0)},{threshold:.15});
+ fo.observe(document.querySelector(".hero"));fo.observe(document.getElementById("contacto"));fo.observe(document.querySelector("footer"));
+ // Dibujo del cierre: los pasadores entran al marco cuando aparece
+ var lk=document.querySelector(".lock");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;lk.classList.add("armed");
+ new IntersectionObserver(function(es,o){if(es[0].isIntersecting){lk.classList.add("on");o.disconnect()}},{threshold:.45}).observe(lk);
+ lk.querySelector(".replay").addEventListener("click",function(){lk.classList.remove("on");setTimeout(function(){lk.classList.add("on")},750)});
+})();
 (function(){
  // Para activar la medición, ponga aquí los códigos. Mientras estén vacíos no aparece aviso ni se carga nada.
  var GA_ID="", PIXEL_ID="";
