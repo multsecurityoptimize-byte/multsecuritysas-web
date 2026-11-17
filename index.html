@@ -160,6 +160,33 @@ ul.chk li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:
 .cajas{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .cajas img{aspect-ratio:16/9}
 
+/* Opiniones */
+.gbadge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:8px 14px;border-radius:999px;background:#ffffff14;border:1px solid #ffffff26;color:#e6e4f0;text-decoration:none;font-size:15px;transition:background var(--t) var(--ease),transform var(--t) var(--ease)}
+.gbadge:hover{background:#ffffff26;transform:translateY(-2px)}
+.gbadge b{color:#fff}
+.st{color:#f5b301;letter-spacing:2px}
+.st45{background:linear-gradient(90deg,#f5b301 88%,#c9c6d6 88%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rev{background:var(--card);border-top:1px solid var(--line)}
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.rev-head h2{margin:0}
+.score{display:flex;align-items:center;gap:14px;padding:14px 20px;border:1px solid var(--line);border-radius:8px;text-decoration:none;background:var(--bg);transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease)}
+.score:hover{transform:translateY(-3px);box-shadow:0 12px 26px #231f3f1f}
+.score .big{font-size:44px;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.score .st{display:block;font-size:20px}
+.score .sub{display:block;color:var(--mute);font-size:14px}
+.quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.q{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease)}
+.q:hover{transform:translateY(-4px);box-shadow:0 14px 30px #231f3f1f}
+.q blockquote{margin:0;flex:1;font-size:16px;line-height:1.6;color:var(--ink)}
+.q blockquote::before{content:"“";display:block;font-size:56px;line-height:.6;color:var(--green);font-weight:900;height:22px}
+.q figcaption{font-size:13px;color:var(--mute)}
+.q figcaption b{display:block;font-size:15px;color:var(--ink)}
+.rev-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:28px 0 0}
+.more{display:inline-block;padding:6px 0;color:var(--green);font-weight:500;text-underline-offset:3px;transition:text-underline-offset var(--t) var(--ease)}
+.more:hover{text-underline-offset:6px}
+@media (max-width:1000px){.quotes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.quotes{grid-template-columns:1fr}.score{width:100%}}
+
 /* Contacto */
 .contact{background:var(--card);border-top:1px solid var(--line)}
 .info{display:grid;gap:14px;margin:24px 0 28px}
@@ -254,6 +281,7 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
   <a href="#puertas">Puertas de seguridad</a>
   <a href="#cerraduras">Cerraduras digitales</a>
   <a href="#cajas">Cajas fuertes</a>
+  <a href="#opiniones">Opiniones</a>
   <a href="#contacto">Contacto</a>
  </nav>
  <div class="acts">
@@ -271,6 +299,7 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
   <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
   <a class="btn ghost" href="tel:+576012317441">Llamar (601) 231 7441</a>
  </div>
+ <a class="gbadge" href="#opiniones"><span class="st st45" aria-hidden="true">★★★★★</span><span><b>4,5 en Google</b> · 24 opiniones de clientes</span></a>
 </div></div>
 
 <section id="puertas"><div class="w">
@@ -369,6 +398,7 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
  </div>
 </div></section>
 
+
 <section id="cajas"><div class="w">
  <div class="split">
   <div class="cajas">
@@ -389,6 +419,26 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
    <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20cotizar%20una%20caja%20fuerte" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg>Cotizar caja fuerte</a>
   </div>
  </div>
+</div></section>
+
+<section id="opiniones" class="rev"><div class="w">
+ <div class="rev-head">
+  <div>
+   <p class="kick" style="color:var(--green)">Opiniones en Google</p>
+   <h2>Lo que dicen nuestros clientes</h2>
+  </div>
+  <a class="score" href="https://maps.google.com/?cid=12416500247681068508" target="_blank" rel="noopener">
+   <span class="big">4,5</span>
+   <span><span class="st st45" aria-hidden="true">★★★★★</span><span class="sub">24 opiniones en Google</span></span>
+  </a>
+ </div>
+ <div class="quotes">
+  <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Son personas muy cumplidas, el trabajo es impecable, y ya me han colocado 3 puertas de seguridad y timbres inteligentes. Los recomiendo mucho y la empresa es 10/10.</blockquote><figcaption><b>Patricia Velasco</b>Reseña en Google</figcaption></figure>
+  <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Muy buen trabajo, cumplieron con nuestras expectativas y nos ayudaron a que la puerta quedara con el estilo del conjunto. Muy cumplidos.</blockquote><figcaption><b>Daniela Morales</b>Reseña en Google</figcaption></figure>
+  <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Excelente servicio. Recomendado por la calidad en los materiales, la oportunidad en la atención y la manera en que se ajustan a las necesidades del cliente.</blockquote><figcaption><b>Nelson Leiva</b>Reseña en Google</figcaption></figure>
+  <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Excelente producto, cumplieron en la fecha prevista, y de una forma muy profesional.</blockquote><figcaption><b>Edgar Mora</b>Reseña en Google</figcaption></figure>
+ </div>
+ <p class="rev-cta"><a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20vi%20sus%20opiniones%20en%20Google%20y%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener"><svg class="wa" aria-hidden="true"><use href="#i-wa"/></svg>Quiero mi cotización</a> <a class="more" href="https://maps.google.com/?cid=12416500247681068508" target="_blank" rel="noopener">Ver todas las opiniones en Google</a></p>
 </div></section>
 
 <section id="contacto" class="contact"><div class="w">
