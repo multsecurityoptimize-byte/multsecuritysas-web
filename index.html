@@ -236,7 +236,7 @@ p.lbl{margin:20px 0 10px}
 .score .big{font-size:44px;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--ink)}
 .score .st{display:block;font-size:20px}
 .score .sub{display:block;color:var(--mute);font-size:14px}
-.quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.q.wide{grid-column:span 2}
 .q{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease)}
 .q:hover{transform:translateY(-4px);box-shadow:0 14px 30px #231f3f1f}
 .q blockquote{margin:0;flex:1;font-size:16px;line-height:1.6;color:var(--ink)}
@@ -247,7 +247,7 @@ p.lbl{margin:20px 0 10px}
 .more{display:inline-block;padding:6px 0;color:var(--green);font-weight:500;text-underline-offset:3px;transition:text-underline-offset var(--t) var(--ease)}
 .more:hover{text-underline-offset:6px}
 @media (max-width:1000px){.quotes{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.quotes{grid-template-columns:1fr}.score{width:100%}}
+@media (max-width:560px){.quotes{grid-template-columns:1fr}.q.wide{grid-column:auto}.score{width:100%}}
 
 /* Contacto */
 .contact{background:var(--card);border-top:1px solid var(--line)}
@@ -555,6 +555,7 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
   </a>
  </div>
  <div class="quotes">
+  <figure class="q wide"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Muy buena experiencia con Mult Security. La atención fue muy buena, me explicaron todo con claridad y cumplieron con lo que se había acordado. Se nota que tienen experiencia y que hacen las cosas bien. Quedé satisfecho con el servicio y definitivamente los recomiendo.</blockquote><figcaption><b>Caleb Orlando Morales Villalba</b>Reseña en Google</figcaption></figure>
   <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Son personas muy cumplidas, el trabajo es impecable, y ya me han colocado 3 puertas de seguridad y timbres inteligentes. Los recomiendo mucho y la empresa es 10/10.</blockquote><figcaption><b>Patricia Velasco</b>Reseña en Google</figcaption></figure>
   <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Muy buen trabajo, cumplieron con nuestras expectativas y nos ayudaron a que la puerta quedara con el estilo del conjunto. Muy cumplidos.</blockquote><figcaption><b>Daniela Morales</b>Reseña en Google</figcaption></figure>
   <figure class="q"><div class="st" role="img" aria-label="5 de 5 estrellas">★★★★★</div><blockquote>Excelente servicio. Recomendado por la calidad en los materiales, la oportunidad en la atención y la manera en que se ajustan a las necesidades del cliente.</blockquote><figcaption><b>Nelson Leiva</b>Reseña en Google</figcaption></figure>
