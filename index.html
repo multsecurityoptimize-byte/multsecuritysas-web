@@ -128,6 +128,68 @@ ul.chk li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:
 .lock .bT{transition-delay:.24s}
 .replay{margin-top:22px;min-height:44px;font-size:15px}
 
+/* Configurador 3D */
+.to3d{display:inline-flex;align-items:center;gap:8px;margin:22px 18px 0 0;padding:6px 0;color:var(--neon);font-weight:700;text-decoration:none;background:linear-gradient(currentColor,currentColor) left bottom/0 2px no-repeat;transition:background-size var(--t) var(--ease)}
+.to3d span{transition:transform var(--t) var(--ease)}
+.to3d:hover{background-size:100% 2px}.to3d:hover span{transform:translateX(4px)}
+.cfg{background:var(--deep);color:#fff;overflow:hidden}
+.cfg-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:stretch}
+.cfg-stage{position:relative;min-height:600px;border-radius:8px;background:radial-gradient(120% 90% at 50% 35%,#3a3462 0%,#231f3f 70%);border:1px solid #ffffff14;overflow:hidden;cursor:grab;touch-action:pan-y}
+.cfg-stage:active{cursor:grabbing}
+.cfg-stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+.cfg-hint{position:absolute;top:14px;left:16px;margin:0;font-size:13px;color:#cfcde0;background:#231f3fb3;padding:6px 12px;border-radius:999px;pointer-events:none;transition:opacity .4s}
+.cfg-stage.used .cfg-hint{opacity:0}
+.cfg-tools{position:absolute;left:14px;right:14px;bottom:14px;display:flex;gap:10px;flex-wrap:wrap;z-index:2}
+.tbtn{position:relative;overflow:hidden;isolation:isolate;min-height:44px;padding:0 16px;border-radius:6px;border:1px solid #ffffff4d;background:#231f3fcc;color:#fff;font:500 15px Roboto,Arial,sans-serif;cursor:pointer;transition:color var(--t) var(--ease),transform .12s var(--ease)}
+.tbtn::before{content:"";position:absolute;inset:0;z-index:-1;background:#fff;transform:translateX(-101%);transition:transform var(--t) var(--ease)}
+.tbtn:hover::before,.tbtn:focus-visible::before{transform:none}
+.tbtn:hover,.tbtn:focus-visible{color:var(--deep)}
+.tbtn:active{transform:scale(.97)}
+.tbtn[data-act=lock][aria-pressed=true]{border-color:var(--neon)}
+.cfg-no3d{display:none;margin:0;color:#cfcde0}
+.no3d .cfg-stage{min-height:0;background:none;border:0}.no3d .cfg-hint,.no3d .cfg-tools{display:none}
+.no3d .cfg-grid{grid-template-columns:1fr}.no3d .cfg-no3d{display:block}
+.has3d #cierre{display:none}
+.cfg-panel{display:flex;flex-direction:column}
+.cfg-panel h2{margin-bottom:10px}
+.cfg-lead{color:#cfcde0;margin:0 0 22px;font-size:17px}
+.cfg-count{display:flex;align-items:center;gap:14px}
+.cfg-count b{font-size:64px;font-weight:900;line-height:.9;letter-spacing:-.04em;color:var(--neon);min-width:1.2ch}
+.cfg-count span{font-size:18px;font-weight:700;line-height:1.25}
+.cfg-count small{display:block;font-size:14px;font-weight:400;color:#cfcde0}
+.meter{display:grid;grid-template-columns:repeat(13,1fr);gap:4px;margin:14px 0 22px}
+.meter i{height:8px;border-radius:2px;background:#ffffff1f;transition:background var(--t) var(--ease)}
+.meter i.on{background:var(--neon)}
+.cfg-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid #ffffff1a}
+.cfg-row+.cfg-row{border-bottom:1px solid #ffffff1a}
+.lbl{font-weight:500;font-size:15px;color:#e6e4f0;margin:0}
+p.lbl{margin:20px 0 10px}
+.step{display:flex;align-items:center;gap:6px}
+.step button{width:44px;height:44px;border-radius:6px;border:1px solid #ffffff4d;background:transparent;color:#fff;font:700 22px Roboto,Arial,sans-serif;cursor:pointer;transition:background var(--t) var(--ease),color var(--t),border-color var(--t),transform .12s var(--ease)}
+.step button:hover:not(:disabled){background:var(--neon);color:var(--deep);border-color:var(--neon)}
+.step button:active:not(:disabled){transform:scale(.92)}
+.step button:disabled{opacity:.3;cursor:not-allowed}
+.step output{min-width:36px;text-align:center;font-size:22px;font-weight:900}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid #ffffff40;background:transparent;color:#fff;font:500 15px Roboto,Arial,sans-serif;cursor:pointer;transition:background var(--t) var(--ease),border-color var(--t),color var(--t),transform var(--t) var(--ease)}
+.chip:hover{border-color:#fff;transform:translateY(-2px)}
+.chip[aria-pressed=true]{background:#fff;color:var(--deep);border-color:#fff}
+.chip.sw::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--sw);box-shadow:inset 0 0 0 1px #0003}
+.more-fin{align-self:flex-start;display:inline-block;margin-top:10px;padding:5px 0;color:var(--neon);font-size:15px;text-underline-offset:3px;transition:text-underline-offset var(--t) var(--ease)}
+.more-fin:hover{text-underline-offset:6px}
+.cfg-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.cfg-note{color:#cfcde0;font-size:14px;margin:12px 0 0}
+@media (max-width:900px){
+ .cfg-grid{grid-template-columns:1fr;gap:28px}
+ .cfg-stage{min-height:440px}
+}
+@media (max-width:520px){
+ .cfg-stage{min-height:400px}
+ .cfg-count b{font-size:52px}
+ .cfg-cta .btn{flex:1 1 100%}
+ .to3d{display:flex;width:max-content}
+}
+
 /* Cerraduras */
 .cerr{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .import{display:inline-block;background:#e3f4e6;color:var(--green2);font-weight:700;border-radius:999px;padding:8px 16px;margin:0 0 16px;font-size:15px}
@@ -299,6 +361,7 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
   <a class="btn" href="https://wa.me/573107673808?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener"><svg class="wa"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
   <a class="btn ghost" href="tel:+576012317441">Llamar (601) 231 7441</a>
  </div>
+ <a class="to3d" href="#configurador">Arme su puerta en 3D<span aria-hidden="true">→</span></a>
  <a class="gbadge" href="#opiniones"><span class="st st45" aria-hidden="true">★★★★★</span><span><b>4,5 en Google</b> · 24 opiniones de clientes</span></a>
 </div></div>
 
@@ -365,6 +428,65 @@ footer .lg{display:flex;gap:16px;flex-wrap:wrap}footer .lg a,footer .lg button{d
     <li>Marco anclado con concreto.</li>
    </ol>
    <button class="btn ghost replay" type="button">Ver el cierre otra vez</button>
+  </div>
+ </div>
+</div></section>
+
+<section id="configurador" class="cfg"><div class="w">
+ <div class="cfg-grid">
+  <div class="cfg-stage" role="img" aria-label="Puerta de seguridad en 3D vista por dentro, con sus pasadores de acero">
+   <p class="cfg-hint" aria-hidden="true">Arrastre para girar la puerta</p>
+   <div class="cfg-tools">
+    <button type="button" class="tbtn" data-act="lock" aria-pressed="false">Cerrar la puerta</button>
+    <button type="button" class="tbtn" data-act="xray" aria-pressed="true">Ver por fuera</button>
+   </div>
+   <p class="cfg-no3d">Su navegador no muestra 3D. Igual puede armar su puerta con las opciones y pedir la cotización.</p>
+  </div>
+  <div class="cfg-panel">
+   <p class="kick">Arme su puerta</p>
+   <h2>Su puerta de seguridad, pasador por pasador</h2>
+   <p class="cfg-lead">Agregue o quite pasadores y vea cómo entran al marco. Cada pasador es un punto más donde la puerta queda anclada.</p>
+
+   <div class="cfg-count" aria-live="polite"><b data-out="total">7</b><span>puntos de cierre<small data-out="detail">3 por cada lado y 1 arriba</small></span></div>
+   <div class="meter" aria-hidden="true"></div>
+
+   <div class="cfg-row">
+    <span class="lbl" id="l-lat">Pasadores a cada lado</span>
+    <div class="step" role="group" aria-labelledby="l-lat">
+     <button type="button" data-step="lat" data-d="-1" aria-label="Quitar un pasador a cada lado">−</button>
+     <output data-out="lat">3</output>
+     <button type="button" data-step="lat" data-d="1" aria-label="Agregar un pasador a cada lado">+</button>
+    </div>
+   </div>
+   <div class="cfg-row">
+    <span class="lbl" id="l-top">Pasadores arriba</span>
+    <div class="step" role="group" aria-labelledby="l-top">
+     <button type="button" data-step="top" data-d="-1" aria-label="Quitar un pasador de arriba">−</button>
+     <output data-out="top">1</output>
+     <button type="button" data-step="top" data-d="1" aria-label="Agregar un pasador arriba">+</button>
+    </div>
+   </div>
+
+   <p class="lbl" id="l-fin">Acabado</p>
+   <div class="chips" role="group" aria-labelledby="l-fin">
+    <button type="button" class="chip sw" data-set="finish" data-v="nogal" style="--sw:#5b3a22">Madera nogal</button>
+    <button type="button" class="chip sw" data-set="finish" data-v="rustica" style="--sw:#8a5832">Madera rústica</button>
+    <button type="button" class="chip sw" data-set="finish" data-v="blanca" style="--sw:#eeeef2">Blanco</button>
+   </div>
+   <a class="more-fin" data-wa="finishes" href="https://wa.me/573107673808" target="_blank" rel="noopener">¿Quiere ver más acabados? Escríbanos</a>
+
+   <p class="lbl" id="l-lock">Cerradura digital</p>
+   <div class="chips" role="group" aria-labelledby="l-lock">
+    <button type="button" class="chip" data-set="lock" data-v="huella">Huella y teclado</button>
+    <button type="button" class="chip" data-set="lock" data-v="manija">Con manija</button>
+    <button type="button" class="chip" data-set="lock" data-v="vertical">Vertical multiacceso</button>
+   </div>
+
+   <div class="cfg-cta">
+    <a class="btn" data-wa="quote" href="https://wa.me/573107673808" target="_blank" rel="noopener"><svg class="wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar esta puerta</a>
+    <a class="btn ghost" data-wa="price" href="https://wa.me/573107673808" target="_blank" rel="noopener">Consultar el precio</a>
+   </div>
+   <p class="cfg-note">El precio depende de las medidas, el acabado y el estilo de su puerta. Se lo damos por WhatsApp con su configuración.</p>
   </div>
  </div>
 </div></section>
@@ -484,7 +606,7 @@ document.getElementById("y").textContent=new Date().getFullYear();
  // Botón flotante: se esconde cuando ya hay botones de WhatsApp en pantalla (portada y contacto)
  var fl=document.querySelector(".float"),vis=new Set();
  var fo=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});fl.classList.toggle("off",vis.size>0)},{threshold:.15});
- fo.observe(document.querySelector(".hero"));fo.observe(document.getElementById("contacto"));fo.observe(document.querySelector("footer"));
+ fo.observe(document.querySelector(".hero"));fo.observe(document.getElementById("contacto"));fo.observe(document.querySelector("footer"));var cf=document.getElementById("configurador");if(cf)fo.observe(cf);
  // Dibujo del cierre: los pasadores entran al marco cuando aparece
  var lk=document.querySelector(".lock");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;lk.classList.add("armed");
  new IntersectionObserver(function(es,o){if(es[0].isIntersecting){lk.classList.add("on");o.disconnect()}},{threshold:.45}).observe(lk);
@@ -507,6 +629,51 @@ document.getElementById("y").textContent=new Date().getFullYear();
  document.getElementById("cks").onclick=function(){guardar("si");ck.style.display="none";cargar()};
  document.getElementById("ckn").onclick=function(){var antes=leer();guardar("no");ck.style.display="none";if(antes==="si")location.reload()};
  var v=leer();if(v==="si")cargar();else if(v!=="no")ck.style.display="block";
+})();
+</script>
+<script>
+// Estado del configurador 3D y mensajes de WhatsApp (funciona aunque el 3D no cargue)
+(function(){
+ var sec=document.getElementById("configurador"); if(!sec)return;
+ var names={finish:{nogal:"madera nogal",rustica:"madera rústica",blanca:"blanco"},lock:{huella:"huella y teclado",manija:"con manija",vertical:"vertical multiacceso"}};
+ var lim={lat:[1,5],top:[0,3]}, subs=[];
+ var st={lat:3,top:1,finish:"nogal",lock:"huella",locked:false,xray:true};
+ var WA="https://wa.me/573107673808?text=";
+ var meter=sec.querySelector(".meter"); for(var i=0;i<13;i++)meter.appendChild(document.createElement("i"));
+ function q(a){return sec.querySelectorAll(a)}
+ function desc(){return st.lat+" pasadores por cada lado y "+st.top+" arriba ("+(st.lat*2+st.top)+" puntos de cierre), acabado "+names.finish[st.finish]+", cerradura "+names.lock[st.lock]}
+ function ui(){
+  var total=st.lat*2+st.top;
+  sec.querySelector("[data-out=total]").textContent=total;
+  sec.querySelector("[data-out=detail]").textContent=st.lat+" por cada lado"+(st.top?" y "+st.top+" arriba":"");
+  sec.querySelector("[data-out=lat]").textContent=st.lat; sec.querySelector("[data-out=top]").textContent=st.top;
+  [].forEach.call(meter.children,function(el,i){el.classList.toggle("on",i<total)});
+  [].forEach.call(q("[data-step]"),function(b){var k=b.dataset.step,d=+b.dataset.d;b.disabled=d<0?st[k]<=lim[k][0]:st[k]>=lim[k][1]});
+  [].forEach.call(q("[data-set]"),function(b){b.setAttribute("aria-pressed",st[b.dataset.set]===b.dataset.v)});
+  var lk=sec.querySelector("[data-act=lock]"); lk.setAttribute("aria-pressed",st.locked); lk.textContent=st.locked?"Abrir la puerta":"Cerrar la puerta";
+  var xr=sec.querySelector("[data-act=xray]"); xr.setAttribute("aria-pressed",st.xray); xr.textContent=st.xray?"Ver por fuera":"Ver por dentro";
+  sec.querySelector("[data-wa=quote]").href=WA+encodeURIComponent("Hola, armé mi puerta de seguridad en la página: "+desc()+". Quiero una cotización.");
+  sec.querySelector("[data-wa=price]").href=WA+encodeURIComponent("Hola, quiero saber el precio de esta puerta de seguridad: "+desc()+". Mis medidas aproximadas son: ");
+  sec.querySelector("[data-wa=finishes]").href=WA+encodeURIComponent("Hola, quiero ver más acabados para mi puerta de seguridad.");
+  sec.querySelector(".cfg-stage").setAttribute("aria-label","Puerta de seguridad en 3D "+(st.xray?"vista por dentro":"vista por fuera")+": "+desc()+(st.locked?", cerrada con los pasadores dentro del marco":""));
+ }
+ window.MSCFG={state:st,on:function(f){subs.push(f)},set:function(p){for(var k in p)st[k]=p[k];ui();subs.forEach(function(f){f(st)})}};
+ sec.addEventListener("click",function(e){
+  var b=e.target.closest("button"); if(!b)return; var p={};
+  if(b.dataset.step){var k=b.dataset.step;p[k]=Math.max(lim[k][0],Math.min(lim[k][1],st[k]+(+b.dataset.d)));if(!st.xray)p.xray=true}
+  else if(b.dataset.set){p[b.dataset.set]=b.dataset.v;p.xray=false}
+  else if(b.dataset.act==="lock")p.locked=!st.locked;
+  else if(b.dataset.act==="xray")p.xray=!st.xray;
+  else return;
+  window.MSCFG.set(p);
+ });
+ ui();
+ // El 3D se carga solo cuando el cliente se acerca a esta sección
+ function gl(){try{var c=document.createElement("canvas");return !!(window.WebGLRenderingContext&&(c.getContext("webgl2")||c.getContext("webgl")))}catch(e){return false}}
+ function no3d(){sec.classList.add("no3d")}
+ if(!gl()||!("IntersectionObserver" in window)){no3d();return}
+ var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();import("./js/configurador.js?v=2").catch(no3d)},{rootMargin:"700px 0px"});
+ io.observe(sec);
 })();
 </script>
 </body>
